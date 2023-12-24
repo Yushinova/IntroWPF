@@ -12,6 +12,7 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+        public bool key = true;
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace Calculator
         private void button5_Click_1(object sender, EventArgs e)//обработка числовых клавишь
         {
             Button B = sender as Button;
+            key = true;
             if(Output.Text=="0" && B.Text!=".")
             {
                 Output.Text = "" + B.Text;
@@ -46,14 +48,23 @@ namespace Calculator
         private void Div_Click(object sender, EventArgs e)//оработка знаков числовых операций
         {
             Button B = sender as Button;
-            Expression.Text += Output.Text+B.Text;
-            Output.Text = "0";
+            if(key)
+            {
+                Expression.Text += Output.Text + B.Text;
+            }  
+            if (Expression.Text.EndsWith("-") || Expression.Text.EndsWith("+")
+               || Expression.Text.EndsWith("*") || Expression.Text.EndsWith("/"))
+            {
+                key = false;
+                Expression.Text=Expression.Text.Remove(Expression.Text.Length-1).Insert(Expression.Text.Length - 1, B.Text);
+            }        
+           Output.Text = "0";
         }
         private void Result_Click(object sender, EventArgs e)//равно
         {   
             Expression.Text += Output.Text;
-            if (Expression.Text[Expression.Text.Length - 1] == '/' || Expression.Text[Expression.Text.Length - 1] == '*'
-                || Expression.Text[Expression.Text.Length - 1] == '+' || Expression.Text[Expression.Text.Length - 1] == '-')
+            if (Expression.Text.EndsWith("-") || Expression.Text.EndsWith("+")
+                || Expression.Text.EndsWith("*") || Expression.Text.EndsWith("/"))
             {
                 Output.Text = Output.Text.Remove(Output.Text.Length - 1);
             }
