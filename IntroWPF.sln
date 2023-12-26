@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroWPF", "IntroWPF\IntroW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{204E6820-82E5-47D8-A7D6-6853BBA0B925}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Containers", "Containers\Containers.csproj", "{1177F216-7E61-4163-BC48-7D547FB6C079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{204E6820-82E5-47D8-A7D6-6853BBA0B925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204E6820-82E5-47D8-A7D6-6853BBA0B925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204E6820-82E5-47D8-A7D6-6853BBA0B925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1177F216-7E61-4163-BC48-7D547FB6C079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1177F216-7E61-4163-BC48-7D547FB6C079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1177F216-7E61-4163-BC48-7D547FB6C079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1177F216-7E61-4163-BC48-7D547FB6C079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
